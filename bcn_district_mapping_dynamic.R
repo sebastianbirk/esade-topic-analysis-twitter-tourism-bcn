@@ -315,36 +315,3 @@ print(plot6, vp = vplayout(2, 3))
 
 # save plot as file
 dev.print(jpeg, filename="topic6_per_month_per_district.jpg", width=1000)
-
-## plot results for topic 7
-current_topic_max = max7
-manual_scale = c(0, current_topic_max*0.1, current_topic_max*0.2, current_topic_max*0.3, current_topic_max*0.4, current_topic_max*0.5, current_topic_max*0.6, current_topic_max*0.7, current_topic_max*0.8, current_topic_max*0.9, current_topic_max)
-
-plot0 <- qtm(june_districts, fill=colnames(june_districts@data)[21], borders='black', 
-             fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), scale=2, title="June", fill.style="fixed", fill.breaks=manual_scale, legend.only=TRUE) 
-
-grid.newpage()
-print(plot0, vp = vplayout(1, 1))
-
-# save plot as file
-dev.print(jpeg, filename="topic7_per_month_per_district_legend.jpg", width=1000)
-
-plot1 <- qtm(june_districts, fill=colnames(june_districts@data)[21], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), scale=1, title="June", fill.style="fixed", fill.breaks=manual_scale) + tm_legend(show=FALSE)
-plot2 <- qtm(july_districts, fill=colnames(july_districts@data)[21], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), scale=1, title="July", fill.style="fixed", fill.breaks=manual_scale) + tm_legend(show=FALSE)
-plot3 <- qtm(august_districts, fill=colnames(august_districts@data)[21], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), scale=1, title="August", fill.style="fixed", fill.breaks=manual_scale) + tm_legend(show=FALSE)
-plot4 <- qtm(september_districts, fill=colnames(september_districts@data)[21], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), scale=1, title="September", fill.style="fixed", fill.breaks=manual_scale) + tm_legend(show=FALSE)
-plot5 <- qtm(october_districts, fill=colnames(october_districts@data)[21], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), scale=1, title="October", fill.style="fixed", fill.breaks=manual_scale) + tm_legend(show=FALSE)
-plot6 <- qtm(november_districts, fill=colnames(november_districts@data)[21], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), scale=1, title="November", fill.style="fixed", fill.breaks=manual_scale) + tm_legend(show=FALSE)
-
-# prepare multiple plots
-grid.newpage()
-pushViewport(viewport(layout=grid.layout(2,3)))
-print(plot1, vp = vplayout(1, 1))
-print(plot2, vp = vplayout(1, 2))
-print(plot3, vp = vplayout(1, 3))
-print(plot4, vp = vplayout(2, 1))
-print(plot5, vp = vplayout(2, 2))
-print(plot6, vp = vplayout(2, 3))
-
-# save plot as file
-dev.print(jpeg, filename="topic7_per_month_per_district.jpg", width=1000)

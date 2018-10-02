@@ -59,43 +59,38 @@ districts@data <- merge(districts@data, results, by.x="C_Distri", by.y="district
 districts@data
 
 # plot results for topic0
-qtm(districts, fill=colnames(districts@data)[14], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 0: Fitness & Sports")
+qtm(districts, fill=colnames(districts@data)[14], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 0: Sightseeing")
 # save plot as file
 dev.print(jpeg, filename="topic0_per_district.jpg", width=1000)
 
 # plot results for topic1
-qtm(districts, fill=colnames(districts@data)[15], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 1: Summer, Sun, Beach")
+qtm(districts, fill=colnames(districts@data)[15], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 1: Summer, Sun & Friends")
 # save plot as file
 dev.print(jpeg, filename="topic1_per_district.jpg", width=1000)
 
 # plot results for topic2
-qtm(districts, fill=colnames(districts@data)[16], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 2: Travel")
+qtm(districts, fill=colnames(districts@data)[16], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 2: Streetart")
 # save plot as file
 dev.print(jpeg, filename="topic2_per_district.jpg", width=1000)
 
 # plot results for topic3
-qtm(districts, fill=colnames(districts@data)[17], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 3: Streetart & Urban Life")
+qtm(districts, fill=colnames(districts@data)[17], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 3: Everyday Life")
 # save plot as file
 dev.print(jpeg, filename="topic3_per_district.jpg", width=1000)
 
 # plot results for topic4
-qtm(districts, fill=colnames(districts@data)[18], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 4: Art")
+qtm(districts, fill=colnames(districts@data)[18], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 4: Lifestyle & Culture")
 # save plot as file
 dev.print(jpeg, filename="topic4_per_district.jpg", width=1000)
 
 # plot results for topic5
-qtm(districts, fill=colnames(districts@data)[19], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 5: Lifestyle & Other")
+qtm(districts, fill=colnames(districts@data)[19], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 5: Nightlife")
 # save plot as file
 dev.print(jpeg, filename="topic5_per_district.jpg", width=1000)
 
 # plot results for topic6
-qtm(districts, fill=colnames(districts@data)[20], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 6: Sightseeing")
+qtm(districts, fill=colnames(districts@data)[20], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 6: Sports, Health & Image")
 # save plot as file
 dev.print(jpeg, filename="topic6_per_district.jpg", width=1000)
-
-# plot results for topic7
-qtm(districts, fill=colnames(districts@data)[21], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Topic 7: Gastronomy")
-# save plot as file
-dev.print(jpeg, filename="topic7_per_district.jpg", width=1000)
 
 
