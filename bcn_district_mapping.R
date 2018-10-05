@@ -31,8 +31,11 @@ load(file3)
 df_districts <- bcn.di@data
 df_neighbourhoods <- bcn.nb@data 
 
+# filter tweets by English language
+english_tweets <- subset(tweets, language3=="ENGLISH")
+
 ## count tweets per district
-tweets_count <- tweets[, .(count = .N), by = .(id_distrito)]
+tweets_count <- english_tweets[, .(count = .N), by = .(id_distrito)]
 # remove first characters of district column
 tweets_count$id_distrito <- str_sub(tweets_count$id_distrito,-2,-1)
 
