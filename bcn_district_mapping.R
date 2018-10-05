@@ -53,6 +53,14 @@ dev.print(jpeg, filename="number_of_tweets_per_district.jpg", width=1000)
 results = read.csv("districts.csv", header = TRUE)
 # inspect the dataframe
 results
+# display mean topic scores
+mean(results$topic0)
+mean(results$topic1)
+mean(results$topic2)
+mean(results$topic3)
+mean(results$topic4)
+mean(results$topic5)
+mean(results$topic6)
 # add leading zeros for merge
 results$district = list("01","02","03","04","05","06","07","08","09","10")
 
