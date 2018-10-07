@@ -250,7 +250,7 @@ print(plot6, vp = vplayout(2, 3))
 # save plot as file
 dev.print(jpeg, filename="topic4_per_month_per_district.jpg", width=1000)
 
-## plot results for topic 4
+## plot results for topic 5
 current_topic_max = max5
 manual_scale = c(0, current_topic_max*0.1, current_topic_max*0.2, current_topic_max*0.3, current_topic_max*0.4, current_topic_max*0.5, current_topic_max*0.6, current_topic_max*0.7, current_topic_max*0.8, current_topic_max*0.9, current_topic_max)
 
@@ -283,7 +283,7 @@ print(plot6, vp = vplayout(2, 3))
 # save plot as file
 dev.print(jpeg, filename="topic5_per_month_per_district.jpg", width=1000)
 
-## plot results for topic 4
+## plot results for topic 6
 current_topic_max = max6
 manual_scale = c(0, current_topic_max*0.1, current_topic_max*0.2, current_topic_max*0.3, current_topic_max*0.4, current_topic_max*0.5, current_topic_max*0.6, current_topic_max*0.7, current_topic_max*0.8, current_topic_max*0.9, current_topic_max)
 

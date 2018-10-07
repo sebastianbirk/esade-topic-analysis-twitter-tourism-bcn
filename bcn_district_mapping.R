@@ -44,10 +44,18 @@ districts <- bcn.di
 districts@data <- merge(districts@data, tweets_count, by.x="C_Distri", by.y="id_distrito")
 # check results
 districts@data
+# remove special characters from district name
+districts@data$N_Distri <- c("Ciutat Vella", "Eixample", "Sants-Montjuic", "Les Corts", "Sarria-Sant Gervasi", "Gracia", "Horta-Guinardo", "Nou Barris", "Sant Andreu", "Sant Marti")
 # create plot
 qtm(districts, fill=colnames(districts@data)[12], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="YlOrRd"), title="Number of Tweets")
 # save plot as file
 dev.print(jpeg, filename="number_of_tweets_per_district.jpg", width=1000)
+
+## plot map of Barcelona districts
+# create plot
+qtm(districts, fill=colnames(districts@data)[2], borders='black', fill.n=10, fill.palette=brewer.pal(n=10, name="Spectral"), title="Districts of Barcelona")
+# save plot as file
+dev.print(jpeg, filename="districts_of_bcn.jpg", width=1000)
 
 # load csv file that contains the results of the topic analysis
 results = read.csv("districts.csv", header = TRUE)
