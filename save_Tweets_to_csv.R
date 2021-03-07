@@ -1,1 +1,0 @@
-write.csv(tweets, file="tweets.csv")

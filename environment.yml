@@ -1,0 +1,8 @@
+name: esade-topic-analysis-twitter
+dependencies:
+- gensim=3.8.3
+- nltk=3.4.5
+- python=3.7.1
+- pandas=1.1.0
+- pip:
+    - ipykernel
